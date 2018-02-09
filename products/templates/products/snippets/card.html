@@ -1,0 +1,22 @@
+<div class="card" style="width: 20rem;">
+  {% if instance.image %}<img class="card-img-top" src="{{ instance.image.url }}"
+    alt="{{ instance.title }} logo" width="250" height="250">
+  {% endif %}
+  <div class="card-body">
+    <h4 class="card-title">{{ instance.title }}</h4>
+    <p class="card-text">{{ instance.description|truncatewords:12 }}</p>
+    <a href="{{ instance.get_absolute_url }}" class="btn btn-outline-primary">View</a>
+      {% include 'products/snippets/update-cart.html' with product=instance cart=cart %}
+  </div>
+<hr>
+{#<div class="col-2"><span class="badge badge-pill badge-info">#}
+{#    {{ instance.tags.count }} tags</span> </div>#}
+
+
+{#    {% for tag in instance.tags.all.distinct %}#}
+{#        <span class="badge badge-pill badge-info">{{ tag }}</span>#}
+{#        {% empty %}#}
+{#        <p>No tags</p>#}
+{#    {% endfor %}#}
+
+</div>

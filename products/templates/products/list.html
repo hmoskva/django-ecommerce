@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+{#    It is {% now "SHORT_DATETIME_FORMAT" %}#}
+    <div class="row text-center">
+        {% for obj in object_list %}
+            <div class="col">
+                {% include 'products/snippets/card.html' with instance=obj %}
+{#                <button class="{% cycle 'btn btn-primary btn-sm' 'btn btn-default btn-sm' %}">#}
+{#            Test#}
+{#            </button>#}
+{#            {% lorem 2 p %}#}
+            {% if forloop.counter|divisibleby:3 %}
+{#                creat new hr every 3 iterations#}
+            </div></div><div class="row"><div class="col-sm-12"><hr
+                style="background-color: black"></div>
+            {% else %}
+            </div>
+            {% endif %}
+
+{#        <p><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a></p>#}
+    {% endfor %}
+    </div>
+    </div>
+
+{#{{ test }}#}
+{% endblock %}

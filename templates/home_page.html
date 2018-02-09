@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+{% block base_head %}
+      <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  {% endblock %}
+{% block content %}
+ <h1 class="text-center">{{ title }}</h1>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>{{ content }}</p>
+                <img src="{% static 'img/pic.jpg' %}" class="img-fluid" height="500"
+                     width="500">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

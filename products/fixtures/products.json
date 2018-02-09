@@ -1,0 +1,100 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "T-Shirt",
+        "slug": "abc",
+        "description": "Black Tees by Habs collections. Dont dull",
+        "price": "39.99",
+        "image": "products/6103848922/6103848922.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Food",
+        "slug": "food",
+        "description": "Awesome food",
+        "price": "3889.99",
+        "image": "products/1522776397/1522776397.jpg",
+        "featured": true,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "Bacon Bolognaise",
+        "slug": "bacon-bolognaise",
+        "description": "Some stuff",
+        "price": "19.99",
+        "image": "products/7433248165/7433248165.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "Biscuit",
+        "slug": "biscuit",
+        "description": "Nice biscuit buy it",
+        "price": "9.99",
+        "image": "products/6020100434/6020100434.jpg",
+        "featured": true,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "title": "Morning snacks",
+        "slug": "morning-snacks",
+        "description": "Lorem ipsum text Lorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum textLorem ipsum text awesome",
+        "price": "399.99",
+        "image": "products/3232925903/3232925903.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "title": "NIce Drink",
+        "slug": "nice-drink",
+        "description": "Take this drink in the morning afternoon and night. You wont regret it. You'll shine",
+        "price": "39.99",
+        "image": "products/7266203745/7266203745.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2017-12-20T14:03:03.505Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "title": "Gucci shirt",
+        "slug": "gucci-shirt",
+        "description": "Designer shirt by gucci.",
+        "price": "1239.99",
+        "image": "products/5168021014/5168021014.jpg",
+        "featured": true,
+        "active": true,
+        "timestamp": "2017-12-20T20:20:02.183Z"
+    }
+}
+]

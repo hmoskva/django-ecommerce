@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{ featured_product.title }}<br/>
+{{ featured_product.description }}<br/>
+{% if featured_product.image %}
+<img src="{{ featured_product.image.url }}">
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,66 @@
+{#{% load bootstrap3 %}#}
+{#{% bootstrap_css %}#}
+
+{% url 'contact' as contact_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
+{% url 'register' as reg_url %}
+{% url 'products:products_home' as products_url %}
+{% url 'cart:home' as cart_url %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+<div class="container">
+  <a class="navbar-brand" href="{% url 'home' %}">{% if brand_name %}{{ brand_name }}
+      {% else %} Habib Stores {% endif %}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if request.path == products_url %} active {% endif %}">
+        <a class="nav-link" href="{{ products_url }}">Products <span class="sr-only">
+            (current)
+        </span></a>
+      </li>
+      <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
+        <a class="nav-link" href="{{ contact_url }}">Contact</a>
+      </li>
+    {% if request.user.is_authenticated %}
+     <li class="nav-item {% if request.path == logout_url %} active {% endif %}">
+        <a class="nav-link" href="{{ logout_url }}">Logout</a>
+      </li>
+    {% else %}
+        <li class="nav-item {% if request.path == login_url %} active {% endif %}">
+        <a class="nav-link" href="{{ login_url }}">Login</a>
+      </li>
+    <li class="nav-item {% if request.path == reg_url %} active {% endif %}">
+        <a class="nav-link" href="{{ reg_url }}">Register</a>
+      </li>
+    {% endif %}
+    <li class="nav-item {% if request.path == cart_url %} active {% endif %}">
+        <a class="nav-link" href="{{ cart_url }}">
+            <i class="fa fa-cart-arrow-down " aria-hidden="true"></i>
+             <small><span class="badge badge-pill badge-dark" id="cart_count">
+                 {{ request.session.cart_items }}
+             </span>
+             </small></a>
+
+      </li>
+{#      <li class="nav-item dropdown">#}
+{#        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#          Dropdown#}
+{#        </a>#}
+{#        <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#          <a class="dropdown-item" href="#">Action</a>#}
+{#          <a class="dropdown-item" href="#">Another action</a>#}
+{#          <div class="dropdown-divider"></div>#}
+{#          <a class="dropdown-item" href="#">Something else here</a>#}
+{#        </div>#}
+{#      </li>#}
+
+        </ul>
+{% include 'search/snippets/search-form.html' %}
+  </div>
+</div>
+</nav>
